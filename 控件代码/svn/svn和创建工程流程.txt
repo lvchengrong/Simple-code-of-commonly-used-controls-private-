@@ -1,0 +1,74 @@
+
+1,装svn服务器,装小乌龟
+2,在svn服务器创建仓库,创建组和用户,给仓库赋予当前组的读写权限
+/***********************************************************************************/
+PM
+3,右键-仓库-拷贝url
+4,创建一个代码,在代码文件夹中右键-TortiseSVN-import,(输入用户名密码)此时所有代码都导入仓库
+5,再找一个文件夹,右键-SVN Checkout
+
+不是所有文件都可以提交
+我们要将下列文件忽略掉
+
+.gradle .idea .iml local.properties (位于app目录下:build app.iml)
+
+如果gradle版本不统一,则也要忽略gradle
+
+忽略操作:右键-TortoiseSVN-Unversion and add to ignore list-最后一个选项
+
+右键-copyurl 得到url发到所在小组的feiq中
+
+/***********************************************************************************/
+
+代码提交和下载:
+1,程序员写了一个代码文件
+2,在androidstudio中.右键文件-show in explorer快速定位到新添加的文件所在的文件夹中.
+3,右键新添加的文件-tortoise svn-add,文件上会出现"+"
+4,右键新添加的文件-svn commit
+
+
+代码冲突:
+1,多个人对同一个文件进行修改,第一个人提交了代码,不会出现冲突
+2,第二个人也对代码进行了修改,提交后出现提交失败,弹出是否更新的提示框,点击更新
+3,此时会出现几个冲突文件,不管
+4,弹出对话框,双击冲突文件,弹出编辑冲突的提示框,按照自己和组员商量的解决思路解决冲突
+5,解决完成后,ctrl+s,弹出对话框选择(Mark as resolved)标记为解决.
+6,提交即可
+7,其他组员更新
+
+多提交
+每次提交前,先更新
+
+找回误删除文件:(回退版本)
+1,A删除了文件,进行了提交
+2,其他组员进行了更新,导致所有人都没有了文件
+3,由一个人右键-tortoise svn-show log,通过日志,查看前面适合的版本
+4,选定版本后,右键那个版本-revert to this revision
+
+/***********************************************************************************/
+//加入所需权限
+ <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+		//修改主题为下面主题
+        android:theme="@android:style/Theme.Holo.Light.NoActionBar">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+</application>
+
+删除values目录下的styles.xml的resource标签里的内容
+
+将MainActivity由AppcompatActivity改为继承Activity,清除对应导入的AppcompatActivity的包
+
+8,编写代码
+
+
+
+

@@ -1,0 +1,15 @@
+Picasso的使用
+ 
+
+详情查看https://github.com/square/picasso
+
+介绍：
+Square开源的比较早的图片加载类库
+自动处理adapter中的ImageView的回收时取消下载图片
+支持加载多种来源的图片，比如网络，sd卡，res资源
+支持设置占位图片
+支持对图片的自定义处理
+
+添加依赖
+ compile 'com.squareup.picasso:picasso:2.5.2'
+

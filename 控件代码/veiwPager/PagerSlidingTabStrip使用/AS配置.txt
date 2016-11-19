@@ -1,0 +1,1 @@
+compile 'com.jpardogo.materialtabstrip:library:1.1.0'
